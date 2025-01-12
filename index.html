@@ -11,28 +11,34 @@
         <div id="title">
             <img id="title_img" class="animate" src="title.png" alt="Blunder" height="192px">
         </div>
-        <div id="trailer"><p>Expected release Fall 2025<br>•𐃷•</p></div>
+        <div id="trailer"><p>Expected release in 2025<br>Trailer coming in summer<br>•𐃷•</p></div>
         <div id="the_rest">
-            <div id="platforms" class="pixel-corners">
-                <div id="playstore" title="Play Store version is free and features only the singleplayer.">
-                    <h3>Free version only on </h3>
-                    <img src="play-store.svg" alt="Play Store">
+            <div id="platform">
+                <div id="platforms" class="pixel-corners">
+                    <div id="playstore" title="Play Store version is free and features only the singleplayer.">
+                        <h3>Free version available on </h3>
+                        <img src="play-store.svg" alt="Play Store">
+                    </div>
+                    <div id="smth_a" class="pixel-corners"></div>
+                    <div id="smth_b" class="pixel-corners"></div>
                 </div>
-                <div id="steam" title="Steam version features singleplayer, multiplayer, achievements, customization, voice chat, and much more.">
-                    <h3>Full features available on </h3>
-                    <img src="steam.svg" alt="Steam">
+                <div id="platforms" class="pixel-corners">
+                    <div id="steam" title="Steam version features singleplayer, multiplayer, achievements, customization, voice chat, and much more.">
+                        <h3>Full features available on </h3>
+                        <img src="steam.svg" alt="Steam">
+                    </div>
+                    <div id="smth_a" class="pixel-corners"></div>
+                    <div id="smth_b" class="pixel-corners"></div>
                 </div>
-                <div id="smth_a" class="pixel-corners"></div>
-                <div id="smth_b" class="pixel-corners"></div>
             </div>
             <div id="social" class="pixel-corners">
-                <div id="discord" title="Join other people and explore what the community has for you">
+                <a id="discord" title="Join other people and explore what the community has for you" href="https://discord.gg/n2dXqTQWes" norefferer noopener target="_blank">
                     <h3>Join our community on Discord</h3>
                     <img src="discord.svg" alt="Discord"> 
-                </div>
+                </a>
             </div>
             <div id="support">
-                <h4>Having a problem? Want to give us a feedback?<br>Feel free to ask us anything:</h4>
+                <h4>Having a problem? Do you wish to give a feedback?<br>Feel free to ask us anything:</h4>
                 <a href="mailto:support@qright.dev">support@qright.dev</a>
             </div>
             <footer>
@@ -45,6 +51,13 @@
         document.getElementById("title_img").addEventListener("animationend",()=>{
             document.getElementById("title_img").classList.remove("animate");
         });
+        document.getElementById("playstore").addEventListener("click",()=>{
+            alert("Game is not yet available! Hold on to your seat ◝(˶˃ ᵕ ˂˶) ◜♡")
+        });
+        document.getElementById("steam").addEventListener("click",()=>{
+            alert("Game is not yet available! Hold on to your seat ◝(˶˃ ᵕ ˂˶) ◜♡")
+        });
+        console.log("Hey, you!\nCan I tell you a little secret? The game is releasing soon.\nPrepare for liftoff!\nlove ya ♡\n- qright");
     </script>
 </body>
 </html>

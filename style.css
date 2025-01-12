@@ -2,7 +2,6 @@
 
 html, body{
     background-color: black;
-    min-height: 100%;
     overflow-x: hidden;
 }
 
@@ -23,27 +22,26 @@ main{
     -webkit-user-drag: none;
     padding: 1rem;
     transition: filter 0.25s ease-in-out;
-    
+    filter: opacity(0%);
 }
 
 .animate{
-    animation: invertToNormal 1s ease forwards;
+    animation: invertToNormal 2.5s ease forwards;
 }
 
 #title_img:hover{
     cursor: none;
     animation: none;
-    filter: opacity(10%);
+    filter: opacity(100%);
 }
 
 
 @keyframes invertToNormal {
     from {
-        filter: invert(100%);
+        filter: opacity(100%);
     }
     to {
-        filter: invert(0%);
-        animation: none;
+        filter: opacity(0%);
     }
 }
 
@@ -72,17 +70,35 @@ main{
     align-items: center;
 }
 
+
+#platform{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
 #platforms{
     user-select: none;
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background-color: rgb(150, 33, 1);
+    justify-content: space-around;
+    background: rgb(224,64,0);
+    background: -moz-linear-gradient(135deg, rgba(224,64,0,1) 0%, rgba(177,0,0,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(224,64,0,1) 0%, rgba(177,0,0,1) 100%);
+    background: linear-gradient(135deg, rgba(224,64,0,1) 0%, rgba(177,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e04000",endColorstr="#b10000",GradientType=1);
     border-radius: 1rem;
-    width: 60%;
+    min-width: 400px;
+    max-width: 400px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #playstore, #steam{
@@ -92,7 +108,7 @@ main{
     align-items: center;
     padding: 1rem;
     cursor: pointer;
-    border: 2px dashed rgb(84, 0, 0);
+    border: 2px dashed rgb(224,64,0);
     border-radius: 10px;
 }
 
@@ -107,8 +123,8 @@ main{
 }
 
 #playstore:hover, #steam:hover{
-    background-color: rgb(84, 0, 0);
-    border-color: rgb(150, 33, 1);
+    background-color: rgb(154, 44, 1);
+    border-color: rgba(224,64,0);
 }
 
 #smth_a, #smth_b{
@@ -136,13 +152,21 @@ main{
     margin-bottom: 6rem;
     width: 25%;
     padding: 0.33rem;
-    background-color: rgb(58, 0, 194);
+    background: rgb(15,0,224);
+    background: -moz-linear-gradient(135deg, rgba(15,0,224,1) 0%, rgba(76,0,182,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(15,0,224,1) 0%, rgba(76,0,182,1) 100%);
+    background: linear-gradient(135deg, rgba(15,0,224,1) 0%, rgba(76,0,182,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f00e0",endColorstr="#4c00b6",GradientType=1);
     border-radius: 1rem;
 }
 
 #discord{
+    display: block;
     padding: 0.5rem;
     border-radius: 10px;
+    color: white;
+    user-select: none;
+    text-decoration: none;
 }
 
 #discord:hover{
@@ -223,4 +247,29 @@ footer{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #333;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #title_img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #platforms{
+        min-width: 0;
+        max-width: 90vw;
+    }
+
+    #platforms h3{
+        padding-left: 8px;
+    }
+
+    #platforms img{
+        padding-right: 8px;
+    }
+
+    #social{
+        width: 60%;
+    }
 }
