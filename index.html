@@ -11,12 +11,12 @@
         <div id="title">
             <img id="title_img" class="animate" src="title.png" alt="Blunder" height="192px">
         </div>
-        <div id="trailer"><p>Expected release in 2025<br>Trailer coming in summer<br>•𐃷•</p></div>
+        <div id="trailer"><p>Expected release in 2025.<br>Trailer coming soon.<br><span id="emoticon">(•. •｡)</span></p></div>
         <div id="the_rest">
             <div id="platform">
                 <div id="platforms" class="pixel-corners">
                     <div id="playstore" title="Play Store version is free and features only the singleplayer.">
-                        <h3>Free version available on </h3>
+                        <h3>Free version will be available on </h3>
                         <img src="play-store.svg" alt="Play Store">
                     </div>
                     <div id="smth_a" class="pixel-corners"></div>
@@ -24,7 +24,7 @@
                 </div>
                 <div id="platforms" class="pixel-corners">
                     <div id="steam" title="Steam version features singleplayer, multiplayer, achievements, customization, voice chat, and much more.">
-                        <h3>Full features available on </h3>
+                        <h3>Full features will be available on </h3>
                         <img src="steam.svg" alt="Steam">
                     </div>
                     <div id="smth_a" class="pixel-corners"></div>
@@ -38,11 +38,11 @@
                 </a>
             </div>
             <div id="support">
-                <h4>Having a problem? Do you wish to give a feedback?<br>Feel free to ask us anything:</h4>
+                <h4>Having a problem? Do you wish to give feedback?<br>Feel free to ask us via:</h4>
                 <a href="mailto:support@qright.dev">support@qright.dev</a>
             </div>
             <footer>
-                <div id="footer"><p>&copy; 2025 All rights reserved - <a href="https://qright.dev">qright.dev</a></p></div>
+                <div id="footer"><p>&copy; <span id="year">2025</span> All rights reserved <br> <a href="https://qright.dev">~ qright.dev ~</a></p></div>
             </footer>
         </div>
     </main>
@@ -57,6 +57,14 @@
         document.getElementById("steam").addEventListener("click",()=>{
             alert("Game is not yet available! Hold on to your seat ◝(˶˃ ᵕ ˂˶) ◜♡")
         });
+        document.getElementById("year").innerText=(new Date()).getFullYear();
+        setInterval(()=>{
+            let emoticon = document.getElementById("emoticon");
+            if(emoticon.innerText=="(•. •｡)"){
+                emoticon.innerText="(-. -｡)";
+            }
+            else emoticon.innerText="(•. •｡)";
+        },1500);
         console.log("Hey, you!\nCan I tell you a little secret? The game is releasing soon.\nPrepare for liftoff!\nlove ya ♡\n- qright");
     </script>
 </body>

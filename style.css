@@ -182,6 +182,7 @@ main{
     width: 100%;
     padding: 2rem;
     background-color: rgb(20, 20, 20);
+    line-height: 1.5rem;
 }
 
 #support a, #support a:visited{
@@ -195,13 +196,18 @@ footer{
 #footer{
     font-family: "Quicksand", sans-serif;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: rgb(16, 16, 16);
 }
 
-#footer a{
-    color: white;
+#footer, #footer a{
+    color: rgb(99, 99, 99);
     text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+#footer a:hover{
+    color: white;
 }
 
 .pixel-corners {
